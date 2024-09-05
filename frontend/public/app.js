@@ -88,3 +88,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
+
+    if (username === "user" && password === "password") {
+        alert("Login successful!");
+        // You can redirect the user here or perform further actions
+    } else {
+        errorMessage.textContent = "Invalid username or password!";
+    }
+});
